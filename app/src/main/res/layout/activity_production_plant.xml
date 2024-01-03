@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProductionPlant"
+    android:paddingHorizontal="22dp"
+    android:background="@color/productionPlant">
+
+    <TextView
+        android:id="@+id/tvPPCode"
+        style="@style/tvStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="@string/Code"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPPName"
+        style="@style/tvStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPPCode" />
+
+    <TextView
+        android:id="@+id/tvPPState"
+        style="@style/tvStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/State"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPPName" />
+
+    <EditText
+        android:id="@+id/etPPCode"
+        style="@style/etStyle"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPPCode"
+        app:layout_constraintStart_toEndOf="@+id/tvPPState" />
+
+    <EditText
+        android:id="@+id/etPPName"
+        style="@style/etStyle"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPPName"
+        app:layout_constraintStart_toEndOf="@+id/tvPPState" />
+
+
+    <Spinner
+        android:id="@+id/spinPPState"
+        android:layout_width="153dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPPState"
+        app:layout_constraintStart_toEndOf="@+id/tvPPState" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPPState" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

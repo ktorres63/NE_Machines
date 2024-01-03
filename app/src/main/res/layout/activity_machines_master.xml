@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/machineMaster"
+    android:paddingHorizontal="22dp"
+    tools:context=".ui.MachinesMaster">
+
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/tvMMCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        style="@style/tvStyle"
+        android:text="@string/Code"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMMName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/tvStyle"
+        android:text="@string/Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMMCode" />
+
+    <TextView
+        android:id="@+id/tvMMProdLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/tvStyle"
+        android:text="@string/ProdLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMMName" />
+
+    <TextView
+        android:id="@+id/tvMMProdPlant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/tvStyle"
+        android:text="@string/prodPlant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMMProdLine" />
+
+    <TextView
+        android:id="@+id/tvMMLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/tvStyle"
+        android:text="@string/Location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMMProdPlant" />
+
+    <TextView
+        android:id="@+id/tvMMState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/tvStyle"
+        android:text="@string/State"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMMLocation" />
+
+    <EditText
+        android:id="@+id/etMMCode"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        style="@style/etStyle"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMMCode"
+        app:layout_constraintStart_toEndOf="@+id/tvMMProdPlant" />
+
+    <EditText
+        android:id="@+id/etMMName"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        style="@style/etStyle"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMMName"
+        app:layout_constraintStart_toEndOf="@+id/tvMMProdPlant" />
+
+    <EditText
+        android:id="@+id/etMMLocation"
+        android:layout_width="153dp"
+        android:layout_height="0dp"
+        style="@style/etStyle"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMMLocation"
+        app:layout_constraintStart_toEndOf="@+id/tvMMProdPlant" />
+
+    <Spinner
+        android:id="@+id/spinMMProdLine"
+        android:layout_width="153dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMMProdLine"
+        app:layout_constraintStart_toEndOf="@+id/tvMMProdPlant" />
+
+    <Spinner
+        android:id="@+id/spinMMProdPlant"
+        android:layout_width="153dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMMProdPlant"
+        app:layout_constraintStart_toEndOf="@+id/tvMMProdPlant" />
+
+    <Spinner
+        android:id="@+id/spinMMState"
+        android:layout_width="153dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMMState"
+        app:layout_constraintStart_toEndOf="@+id/tvMMProdPlant" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMMState"
+        android:layout_marginTop="43dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
