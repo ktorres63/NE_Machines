@@ -4,19 +4,19 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.tutorial.ne_machinesapp.data.database.entities.ProductionPlant
+import com.tutorial.ne_machinesapp.data.database.entities.ProductionPlantEntity
 
 @Dao
 interface ProductionPlantDao {
-    @Query("SELECT * FROM productionPlant")
-    fun getAll(): List<ProductionPlant>
+    @Query("SELECT * FROM ProductionPlantEntity")
+    fun getAll(): List<ProductionPlantEntity>
 
-    @Query("SELECT * FROM productionPlant WHERE code IN (:plCodes)")
-    fun loadAllByIds(ppCodes: IntArray): List<ProductionPlant>
+    @Query("SELECT * FROM ProductionPlantEntity WHERE code IN (:ppCodes)")
+    fun loadAllByIds(ppCodes: IntArray): List<ProductionPlantEntity>
 
     @Insert
-    fun insertAll(vararg prodPlant: ProductionPlant)
+    fun insertAll(vararg prodPlant: ProductionPlantEntity)
 
     @Delete
-    fun delete(prodPlant: ProductionPlant)
+    fun delete(prodPlant: ProductionPlantEntity)
 }

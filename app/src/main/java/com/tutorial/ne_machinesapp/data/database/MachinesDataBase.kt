@@ -1,16 +1,20 @@
 package com.tutorial.ne_machinesapp.data.database
 
 import androidx.room.Database
-import com.tutorial.ne_machinesapp.data.database.dao.MachineMasterDao
+import androidx.room.RoomDatabase
 import com.tutorial.ne_machinesapp.data.database.dao.ProductionLineDao
 import com.tutorial.ne_machinesapp.data.database.dao.ProductionPlantDao
-import com.tutorial.ne_machinesapp.data.database.entities.ProductionLine
-import com.tutorial.ne_machinesapp.data.database.entities.ProductionPlant
-import com.tutorial.ne_machinesapp.ui.MachinesMaster
+import com.tutorial.ne_machinesapp.data.database.entities.ProductionLineEntity
+import com.tutorial.ne_machinesapp.data.database.entities.ProductionPlantEntity
+import com.tutorial.ne_machinesapp.data.database.entities.MachineMasterEntity
 
-@Database(entities = [MachinesMaster::class, ProductionLine::class, ProductionPlant::class],version = 1)
-abstract class MachinesDataBase {
-    abstract fun machineMasterDao(): MachineMasterDao
-    abstract fun productionLineDao(): ProductionLineDao
-    abstract fun productionPlantDao(): ProductionPlantDao
+//MachineMasterEntity::class,
+//@Database(entities = [ ProductionLineEntity::class, ProductionPlantEntity::class],version = 1)
+
+@Database(entities = [ ProductionLineEntity::class, ProductionPlantEntity::class],version = 1, exportSchema = false)
+abstract class MachinesDataBase: RoomDatabase() {
+    //abstract fun machineMasterDao(): MachineMasterDao
+    abstract fun getproductionLineDao(): ProductionLineDao
+    abstract fun getproductionPlantDao(): ProductionPlantDao
 }
+

@@ -5,8 +5,8 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class ProductionLine (
+data class ProductionPlantEntity (
     @PrimaryKey val code: Int,
-    @ColumnInfo(name = "namePL") val name: String?,
-    @ColumnInfo(name = "state") val state: String?,
+    @ColumnInfo(name = "namePP") val namePP: String?,
+    @ColumnInfo(name = "statePP") val statePP: String?,
 )

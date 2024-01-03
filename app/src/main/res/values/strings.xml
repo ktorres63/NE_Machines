@@ -53,4 +53,10 @@
     <string name="Location">Ubicacion</string>
     <string name="State">Estado de registro</string>
     <string name="save">Guardar</string>
+
+    <string-array name="RegisterStates">
+        <item>Activo</item>
+        <item>Inactivo</item>
+        <item>Eliminado</item>
+    </string-array>
 </resources>

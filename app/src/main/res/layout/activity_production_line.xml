@@ -9,6 +9,17 @@
     tools:context=".ui.ProductionLine">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/productionLine"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"
+        android:textSize="24sp"
+        />
+
+    <TextView
         android:id="@+id/tvPLCode"
         style="@style/tvStyle"
         android:layout_width="wrap_content"
@@ -66,6 +77,7 @@
         app:layout_constraintStart_toEndOf="@+id/tvPLState" />
 
     <Button
+        android:id="@+id/btnSavePLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="43dp"

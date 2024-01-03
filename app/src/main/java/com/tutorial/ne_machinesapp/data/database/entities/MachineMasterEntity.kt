@@ -5,11 +5,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class MachineMaster (
+data class MachineMasterEntity (
     @PrimaryKey val code: Int,
-    @ColumnInfo(name = "nameMM") val name: String?,
+    @ColumnInfo(name = "nameMM") val nameMM: String?,
     @ColumnInfo(name = "prodLine") val prodLine: String?,
     @ColumnInfo(name = "prodPlant") val prodPlant: String?,
-    @ColumnInfo(name = "location") val location: String?,
-    @ColumnInfo(name = "state") val state: String?,
+    @ColumnInfo(name = "locationMM") val locationMM: String?,
+    @ColumnInfo(name = "stateMM") val stateMM: String?,
 )
