@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ProductionPlant"
+    android:background="@color/productionPlant"
     android:paddingHorizontal="22dp"
-    android:background="@color/productionPlant">
+    tools:context=".ui.ProductionPlant">
 
     <TextView
         android:id="@+id/tvPPCode"
@@ -14,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
+
         android:text="@string/Code"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +45,7 @@
         style="@style/etStyle"
         android:layout_width="153dp"
         android:layout_height="wrap_content"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/tvPPCode"
         app:layout_constraintStart_toEndOf="@+id/tvPPState" />
 

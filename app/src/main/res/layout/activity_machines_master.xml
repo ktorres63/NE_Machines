@@ -10,88 +10,89 @@
 
 
     <TextView
-        android:textColor="@color/black"
         android:id="@+id/tvMMCode"
+        style="@style/tvStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
-        style="@style/tvStyle"
         android:text="@string/Code"
+        android:textColor="@color/black"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvMMName"
+        style="@style/tvStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        style="@style/tvStyle"
         android:text="@string/Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvMMCode" />
 
     <TextView
         android:id="@+id/tvMMProdLine"
+        style="@style/tvStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        style="@style/tvStyle"
         android:text="@string/ProdLine"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvMMName" />
 
     <TextView
         android:id="@+id/tvMMProdPlant"
+        style="@style/tvStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        style="@style/tvStyle"
         android:text="@string/prodPlant"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvMMProdLine" />
 
     <TextView
         android:id="@+id/tvMMLocation"
+        style="@style/tvStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        style="@style/tvStyle"
         android:text="@string/Location"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvMMProdPlant" />
 
     <TextView
         android:id="@+id/tvMMState"
+        style="@style/tvStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        style="@style/tvStyle"
         android:text="@string/State"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMMLocation" />
 
     <EditText
         android:id="@+id/etMMCode"
+        style="@style/etStyle"
         android:layout_width="153dp"
         android:layout_height="wrap_content"
-        style="@style/etStyle"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/tvMMCode"
         app:layout_constraintStart_toEndOf="@+id/tvMMProdPlant" />
 
     <EditText
         android:id="@+id/etMMName"
+        style="@style/etStyle"
         android:layout_width="153dp"
         android:layout_height="wrap_content"
-        style="@style/etStyle"
         app:layout_constraintBottom_toBottomOf="@+id/tvMMName"
         app:layout_constraintStart_toEndOf="@+id/tvMMProdPlant" />
 
     <EditText
         android:id="@+id/etMMLocation"
+        style="@style/etStyle"
         android:layout_width="153dp"
         android:layout_height="0dp"
-        style="@style/etStyle"
         app:layout_constraintBottom_toBottomOf="@+id/tvMMLocation"
         app:layout_constraintStart_toEndOf="@+id/tvMMProdPlant" />
 
@@ -122,11 +123,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/save"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMMState"
         android:layout_marginTop="43dp"
-        />
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMMState" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

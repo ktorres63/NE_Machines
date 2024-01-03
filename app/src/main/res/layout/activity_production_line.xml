@@ -42,6 +42,7 @@
     <EditText
         android:id="@+id/etPLCode"
         style="@style/etStyle"
+        android:inputType="number"
         android:layout_width="153dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/tvPLCode"
