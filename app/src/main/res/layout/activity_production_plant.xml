@@ -6,17 +6,18 @@
     android:layout_height="match_parent"
     android:background="@color/productionPlant"
     android:paddingHorizontal="22dp"
-    tools:context=".ui.ProductionPlant">
+    tools:context=".ui.ProductionPlantActivity">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/productionPlant"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="60dp"
+        android:text="@string/productionPlant"
         android:textSize="24sp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvPPCode"
         style="@style/tvStyle"
@@ -75,13 +76,159 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvPPState"
         app:layout_constraintStart_toEndOf="@+id/tvPPState" />
 
-    <Button
-        android:layout_width="wrap_content"
+
+    <!--HEADER-->
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
-        android:text="@string/save"
+        android:layout_marginTop="33dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPPState" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPPState">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Code"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/Name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/State"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--  -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPPlants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llHeader" />
+
+
+    <LinearLayout
+        android:id="@+id/llBtns1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvPPlants">
+
+        <Button
+            android:id="@+id/btnAddPPlant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+
+            android:text="@string/Add" />
+
+        <Button
+            android:id="@+id/btnModifyPPlant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+
+            android:text="@string/Modify" />
+
+        <Button
+            android:id="@+id/btnDeletePPlant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+
+            android:text="@string/Delete" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBtns2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llBtns1">
+
+        <Button
+            android:id="@+id/btnCancelPPlant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/Cancel" />
+
+        <Button
+            android:id="@+id/btnInactivatePPlant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/Inactivate" />
+
+        <Button
+            android:id="@+id/btnReactivatePPlant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/Reactivate" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llBtns2">
+
+        <Button
+            android:id="@+id/btnUpdatePPlant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/Update" />
+
+        <Button
+            android:id="@+id/btnExitPPlant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/Exit" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.tutorial.ne_machinesapp.databinding.ActivityMachinesMasterBinding
 
-class MachinesMaster : AppCompatActivity() {
+class MachinesMasterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMachinesMasterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

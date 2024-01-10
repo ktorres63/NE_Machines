@@ -6,7 +6,7 @@ import android.widget.ArrayAdapter
 import com.tutorial.ne_machinesapp.R
 import com.tutorial.ne_machinesapp.databinding.ActivityProductionLineBinding
 
-class ProductionLine : AppCompatActivity() {
+class ProductionLineActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProductionLineBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class ProductionLine : AppCompatActivity() {
         }
     }
     private fun initUI() {
-        binding.btnSavePLine.setOnClickListener {
+        binding.btnAddPLine.setOnClickListener {
             val codigo = binding.etPLCode.text.toString().toInt()
             val nombre = binding.etPLName
 

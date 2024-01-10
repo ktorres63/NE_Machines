@@ -52,7 +52,14 @@
     <string name="prodPlant">Planta de produccion</string>
     <string name="Location">Ubicacion</string>
     <string name="State">Estado de registro</string>
-    <string name="save">Guardar</string>
+    <string name="Add">Adicionar</string>
+    <string name="Delete">Eliminar</string>
+    <string name="Modify">Modificar</string>
+    <string name="Cancel">Cancelar</string>
+    <string name="Inactivate">Inactivar</string>
+    <string name="Reactivate">Reactivar</string>
+    <string name="Update">Actualizar</string>
+    <string name="Exit">Salir</string>
 
     <string-array name="RegisterStates">
         <item>Activo</item>

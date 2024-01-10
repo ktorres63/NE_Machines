@@ -13,13 +13,13 @@
         android:theme="@style/Theme.NE_MachinesApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.ProductionPlant"
+            android:name=".ui.ProductionPlantActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ProductionLine"
+            android:name=".ui.ProductionLineActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MachinesMaster"
+            android:name=".ui.MachinesMasterActivity"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"

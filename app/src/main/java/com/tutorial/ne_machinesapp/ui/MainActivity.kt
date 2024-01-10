@@ -13,15 +13,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnProducionLine.setOnClickListener {
-            val intent = Intent(this, ProductionLine::class.java)
+            val intent = Intent(this, ProductionLineActivity::class.java)
             startActivity(intent)
         }
         binding.btnMastersMachines.setOnClickListener {
-            val intent = Intent(this, MachinesMaster::class.java)
+            val intent = Intent(this, MachinesMasterActivity::class.java)
             startActivity(intent)
         }
         binding.btnProducionPlant.setOnClickListener {
-            val intent = Intent(this, ProductionPlant::class.java)
+            val intent = Intent(this, ProductionPlantActivity::class.java)
             startActivity(intent)
         }
     }
