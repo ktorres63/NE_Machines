@@ -17,5 +17,9 @@ class ProdLineAdapter(private val PlineList: ArrayList<ProdLine>): RecyclerView.
     override fun onBindViewHolder(holder: ProdLineViewHolder, position: Int) {
         val currentItem = PlineList[position]
         holder.code.text = currentItem.code
+        holder.name.text = currentItem.name
+        holder.state.text = currentItem.state
+
+
     }
 }

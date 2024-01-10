@@ -10,21 +10,21 @@ android:paddingVertical="10dp">
 
 <TextView
     android:id="@+id/tvCode_ItemPP"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_weight="1"
     tools:text="0000001" />
 
 <TextView
     android:id="@+id/tvName_ItemPP"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_weight="3"
     tools:text="Carlos Sanchez"/>
 <TextView
     android:id="@+id/tvState_ItemPP"
     android:gravity="center"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_weight="1"
     tools:text="A"/>
